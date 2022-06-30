@@ -1,8 +1,10 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 import bootstrap from 'bootstrap';
-import 'bootstrap/dist/css./bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './main.html';
+import './NAVBAR/navbar.html';
+import './NAVBAR/navbar.js';
 
 Template.hello.onCreated(function helloOnCreated() {
   // counter starts at 0
