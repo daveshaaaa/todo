@@ -1,0 +1,195 @@
+<template name="AddProf">
+  <section style="background-color:rgb(255, 127, 145);">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col">
+          </div>
+        </div>
+    <div class="card">      
+      <div class="row">
+          {{#each userData}}
+          <div class="col-lg-4">
+            
+            <div class="card mb-4">
+              <div class="card-body text-center">
+                <img src="https://as1.ftcdn.net/v2/jpg/01/26/33/46/1000_F_126334671_kmz7zohb6w480Vrv1We6oJGqjN05Lw0w.jpg" alt="avatar"
+                  class="rounded-circle img-fluid" style="width: 300px;">
+                <h5 class="my-3">{{profile.FN}} {{profile.LN}}</h5>
+                <p class="text-muted mb-1">Human Being (I think)</p> 
+  
+                <div class="input-group input-group-sm mb-3">
+                  <span class="input-group-text" >First Name</span> 
+                  <input id="FN" type="text" class="form-control" placeholder="Please enter your First Name">
+                </div> 
+  
+                <div class="input-group input-group-sm mb-3">
+                  <span class="input-group-text" >Last Name</span> 
+                  <input id="LN" type="text" class="form-control" placeholder="Please enter your Last Name">
+                </div> 
+  
+                <div class="input-group mb-3">
+                  <label class="input-group-text" id = "FSex" for="inputGroupSelect01">Sex :</label>
+                  <select class="form-select" id="inputGroupSelect01">
+                    <option selected>Choose...</option>
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                    <option value="3">Part of the lgbtqia +</option>
+                  </select>
+                </div>
+  
+                <p class="text-muted mb-4"></p>
+  
+                <div class="d-flex justify-content-center mb-2">
+                  <button type="button" class="btn btn-dark" id="liveAlertBtn">Follow</button>
+                  <button type="button" class="btn btn-outline-dark ms-1">Don't Follow</button>
+                </div>
+                <div id="liveAlertPlaceholder"></div>
+              </div>
+            </div>
+          </div>
+            <!-- <div class="card mb-4 mb-lg-0">
+              <div class="card-body p-0">
+                <ul class="list-group list-group-flush rounded-3"> 
+                  <button type="button" class="btn btn-danger">Progress Rate</button> 
+                  <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                    <i class="fas fa-globe fa-lg text-warning"></i>
+                    <p class="mb-0"></p> 
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center p-3"> 
+                    <i class="fab fa-github fa-lg" style="color: #ac2bac;"></i>
+                    <p class="mb-0"></p>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                    <i class="fab fa-twitter fa-lg" style="color:#ac2bac;"></i>
+                    <p class="mb-0"></p>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                    <i class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i>
+                    <p class="mb-0"></p>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                    <i class="fab fa-facebook-f fa-lg" style="color: #ac2bac;"></i>
+                    <p class="mb-0"></p>
+                  </li>
+                </ul>
+              </div>
+            </div> -->
+          </div>
+          
+          {{/each}}
+          <div class="col-lg-8">
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="row">
+                  
+                     
+                  <div class="row">
+                    <div class="col-xl-6"> 
+                        <div class="center">
+                          <h4>Task To be Completed</h4>
+                        </div>
+                        
+                <div class="row">
+                    <div class="col-xl-12 addTaskFrame-top pt-4 px-5">
+                        <div class="input-group mb-3" id="js-addTaskGroup1">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-list-check"></i></span>
+                            <input type="text" class="form-control inputTaskS" id="NT" placeholder="Add Task" aria-label="Username" aria-describedby="button-addon2"> 
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12 addTaskFrame-sides px-5 py-2 text-end">
+                         
+                        <div class="input-group mb-3">
+                          <span class="input-group-text" id="DT">Due Date</span>
+                          <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div> 
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                          <!-- List Tasks -->
+                          <button type="button" class="btn btn-dark js-saveInfo " id = "AlerBtn">Add Task</button> 
+                          <button type="button" class="btn btn-dark js-add5">List</button>
+                        </div>
+                        
+                        <div class="privateTask inputTaskSize">
+                          <span>Private</span>
+                          <i class="fa-solid fa-check d-none"></i>
+                          <i class="fa-solid fa-xmark"></i>
+                      </div>
+                    </div>
+                </div>
+                    </div> 
+                  </div>                          
+               </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card mb-4 mb-md-0">
+                  <div class="card-body">
+                    <p class="mb-4"><span class="text-primary font-italic me-1">Task :</span> Completed
+                    </p>
+                    <p class="mb-1" style="font-size: .77rem;">Web Design</p>
+                    <div class="progress rounded" style="height: 5px;">
+                      <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="68"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <p class="mt-4 mb-1" style="font-size: .77rem;">Website Makeup</p>
+                    <div class="progress rounded" style="height: 5px;">
+                      <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="23"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  
+                    <p class="mt-4 mb-1" style="font-size: .77rem;">Front End</p>
+                    <div class="progress rounded" style="height: 5px;">
+                      <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
+                        aria-valuemin="0" aria-valuemax="100">
+                      </div>
+                    </div>
+                    <p class="mt-4 mb-1" style="font-size: .77rem;">Back End</p>
+                    <div class="progress rounded mb-2" style="height: 5px;">
+                      <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="13"
+                        aria-valuemin="0" aria-valuemax="100">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card mb-4 mb-md-0">
+                  <div class="card-body">
+                    <p class="mb-4"><span class="text-primary font-italic me-1">Task :</span> Not Completed
+                    </p>
+                    <p class="mb-1" style="font-size: .77rem;">Web Design</p>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">
+                      </div>
+                    </div>
+                    <p class="mt-4 mb-1" style="font-size: .77rem;">Website Makeup</p>
+                    <div class="progress rounded" style="height: 5px;">
+                      <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
+                        aria-valuemin="0" aria-valuemax="100">
+                      </div>
+                    </div>
+                    
+                    <p class="mt-4 mb-1" style="font-size: .77rem;">Front End</p>
+                    <div class="progress rounded" style="height: 5px;">
+                      <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
+                        aria-valuemin="0" aria-valuemax="100">
+                      </div>
+                    </div>
+                    <p class="mt-4 mb-1" style="font-size: .77rem;">Back End</p>
+                    <div class="progress rounded mb-2" style="height: 5px;">
+                      <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
+                        aria-valuemin="0" aria-valuemax="100">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> 
+  </template>
